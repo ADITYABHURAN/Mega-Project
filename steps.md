@@ -99,3 +99,9 @@ mkdir controllers, db, middlewares, models, routes, utils, validators
 ### Step 9: Create API Error Handler
 **File Created:** `src/utils/api-error.js`
 **Purpose:** Custom error class for consistent API error responses with status codes and error messages.
+
+---
+
+### Step 10: Create Async Handler Utility
+**File Created:** `src/utils/async-handler.js`
+**Purpose:** Placeholder for async route handler wrapper to catch errors (to be implemented later).
