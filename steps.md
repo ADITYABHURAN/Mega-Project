@@ -92,4 +92,10 @@ mkdir controllers, db, middlewares, models, routes, utils, validators
 
 ### Step 8: Set Up Database Connection
 **File Created:** `src/db/index.js`
-**Purpose:** Configure MongoDB connection using Mongoose.
+**Purpose:** Configure MongoDB connection using Mongoose with error handling and auto-exit on failure.
+
+---
+
+### Step 9: Create API Error Handler
+**File Created:** `src/utils/api-error.js`
+**Purpose:** Custom error class for consistent API error responses with status codes and error messages.
