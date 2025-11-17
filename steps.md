@@ -71,3 +71,25 @@ git init
 - `public/images/.gitkeep` - Keep empty folder in Git
 
 **Purpose:** Set up the basic project folder structure for organizing code and assets.
+
+---
+
+### Step 7: Create Source Code Folders
+**Command:**
+```powershell
+mkdir controllers, db, middlewares, models, routes, utils, validators
+```
+**Purpose:** Created organized folder structure inside `src/` for backend code:
+- `controllers/` - Handle request/response logic
+- `db/` - Database configuration and connection
+- `middlewares/` - Custom middleware functions
+- `models/` - Database schemas and models
+- `routes/` - API endpoint definitions
+- `utils/` - Utility/helper functions
+- `validators/` - Input validation logic
+
+---
+
+### Step 8: Set Up Database Connection
+**File Created:** `src/db/index.js`
+**Purpose:** Configure MongoDB connection using Mongoose.
