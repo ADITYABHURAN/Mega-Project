@@ -53,7 +53,21 @@ npm install --save-dev prettier
 
 ---
 
-## Next Steps
-- Configure Prettier settings
-- Create project structure
-- Set up environment variables
+### Step 5: Initialize Git Repository
+**Command:**
+```bash
+git init
+```
+**Purpose:** Initialize version control to track changes throughout the project.
+
+---
+
+### Step 6: Create Project Structure
+**Files/Folders Created:**
+- `.env` - Environment variables (database connection, API keys, etc.)
+- `.env.example` - Template for environment variables
+- `Readme.md` - Project documentation
+- `public/images/` - Static image assets folder
+- `public/images/.gitkeep` - Keep empty folder in Git
+
+**Purpose:** Set up the basic project folder structure for organizing code and assets.
