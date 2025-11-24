@@ -1,6 +1,7 @@
 import mongoose, {Schema} from "mongoose";
 import bcrypt from "bcryptjs";
 import jwt from "jsonqwebtoken";
+import crypto from "crypto";
 
 const userSchema = new Schema({
     avatar: {
@@ -94,6 +95,15 @@ userSchema.methods.generaterRefreshToken = function() {
         //update in .env file as well
     );
 };
+
+//for Temporarytoken using crypto
+ userSchema.methods.generateTemporaryToken = function() {
+    const unHashedToken = crypto.randomBytes(20).toString("hex");
+    const hashedToken = crypto.createHash("sha256").update(unHashedToken).digest("hex");
+    const tokenExpiry = Date.now() + 3600000; // 1 hour from now
+
+    return {unHashedToken, hashedToken, tokenExpiry };
+}
 
 
 export const User = mongoose.model("User", userSchema);
