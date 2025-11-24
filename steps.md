@@ -105,3 +105,16 @@ mkdir controllers, db, middlewares, models, routes, utils, validators
 ### Step 10: Create Async Handler Utility
 **File Created:** `src/utils/async-handler.js`
 **Purpose:** Placeholder for async route handler wrapper to catch errors (to be implemented later).
+
+---
+
+### Step 11: Create Database Models
+**Files Created:**
+- `src/models/user.models.js` - User schema and model
+- `src/models/project.models.js` - Project schema and model
+- `src/models/task.models.js` - Task schema and model
+- `src/models/subtask.models.js` - Subtask schema and model
+- `src/models/projectmember.models.js` - Project member schema and model
+- `src/models/note.models.js` - Project notes schema with references to User and Project
+
+**Purpose:** Define MongoDB schemas using Mongoose for the application's data structure with relationships and automatic timestamps.
