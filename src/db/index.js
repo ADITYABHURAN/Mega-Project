@@ -1,4 +1,4 @@
-//connecting db here from mongoose 
+////connecting db here from mongoose 
 import mongoose from "mongoose";
 
 const connectDB = async () => {
