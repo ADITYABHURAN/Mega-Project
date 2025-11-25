@@ -1,10 +1,15 @@
-import {ApiResponse} from "../utils/apiResponse.util.js";
+import {ApiResponse} from "../utils/api-response.js";
 
+const healthcheck = async (req, res) => {
+  try {
+     await console.log("logic to connect with db");
 
-const healthcheck = (req, res) => {
     res.status(200).json(
         new ApiResponse(200, {message: "Server is running"})
     )
+  } catch (error) {
+    
+  }
 }
 
 export {healthcheck};

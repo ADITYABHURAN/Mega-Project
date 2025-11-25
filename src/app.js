@@ -5,7 +5,7 @@ const app  = express();
 
 
 //router imports
-import healthCheckRouter from './routes/healthCheckRoutes.js';
+import healthCheckRouter from './routes/healthcheckroutes.js';
 
 app.use("/api/v1/healthcheck", healthCheckRouter);
 
