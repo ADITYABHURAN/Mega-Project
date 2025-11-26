@@ -6,3 +6,6 @@ const registerUser = asyncHandler(async (req, res) => {
     //logic for registering user
     const {email, password, username} = req.body;
 });
+
+
+export {registerUser};
