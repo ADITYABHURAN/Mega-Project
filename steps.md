@@ -203,4 +203,14 @@ npm i mailgen nodemailer
 ---
 
 ### Step 22: Set Up File Upload with Multer
-**Purpose:** Exploring multer and express-fileupload middleware for handling file uploads (avatar images, attachments, etc.)
+**Command:**
+```powershell
+npm i multer
+```
+**Purpose:** Installed multer middleware for handling multipart/form-data file uploads (avatar images, attachments, etc.)
+
+---
+
+### Step 23: Create Multer Middleware
+**File Created:** `src/middlewares/multer.middleware.js`
+**Purpose:** Configure multer for file upload handling with storage and file filtering options.
