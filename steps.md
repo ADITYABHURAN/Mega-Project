@@ -193,3 +193,14 @@ npm i mailgen nodemailer
 - **mailgen**: Generate beautiful HTML emails with pre-built templates
 
 **Use Case:** nodemailer bhejne ke liye (sending emails), mailgen craft krne ke liye (creating styled email templates)
+
+---
+
+### Step 21: Create Email Utility
+**File Created:** `src/utils/mail.js`
+**Purpose:** Set up email configuration using nodemailer and mailgen for sending transactional emails.
+
+---
+
+### Step 22: Set Up File Upload with Multer
+**Purpose:** Exploring multer and express-fileupload middleware for handling file uploads (avatar images, attachments, etc.)
