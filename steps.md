@@ -118,3 +118,65 @@ mkdir controllers, db, middlewares, models, routes, utils, validators
 - `src/models/note.models.js` - Project notes schema with references to User and Project
 
 **Purpose:** Define MongoDB schemas using Mongoose for the application's data structure with relationships and automatic timestamps.
+
+---
+
+### Step 12: Set Up Docker MongoDB
+**Command:**
+```powershell
+docker run --name mongodb -d -p 27017:27017 mongo
+```
+**Purpose:** Started MongoDB container using Docker for local development database.
+
+---
+
+### Step 13: Configure Environment Variables
+**Update:** Modified `.env` file - Updated `MONGO_URI` to `mongodb://localhost:27017/mega-project`
+
+---
+
+### Step 14: Create Application Entry Point
+**Files Created:**
+- `src/index.js` - Main server entry point with DB connection and server startup
+- `src/app.js` - Express app configuration and route setup
+
+---
+
+### Step 15: Implement Async Handler Utility
+**File Updated:** `src/utils/async-handler.js`
+**Purpose:** Wrapper function for async controllers to auto-handle errors.
+
+---
+
+### Step 16: Create Controllers
+**Files Created:**
+- `src/controllers/healthcheck.controllers.js` - Health check endpoint
+- `src/controllers/auth.controllers.js` - Authentication logic
+- `src/controllers/project.controllers.js` - Project management
+- `src/controllers/task.controllers.js` - Task management
+
+---
+
+### Step 17: Create Routes
+**Files Created:**
+- `src/routes/healthcheckroutes.js` - Health check route
+- `src/routes/auth.route.js` - Authentication routes
+- `src/routes/project.routes.js` - Project routes
+- `src/routes/task.routes.js` - Task routes
+- `src/routes/note.routes.js` - Note routes
+
+---
+
+### Step 18: Create Validators
+**Files Created:**
+- `src/validators/index.js` - Validation rules
+- `src/middlewares/validator.middleware.js` - Validation error handler
+
+---
+
+### Step 19: Start the Server
+**Command:**
+```powershell
+npm run start
+```
+**Result:** Server running successfully at `http://localhost:8000`
