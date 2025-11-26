@@ -180,3 +180,16 @@ docker run --name mongodb -d -p 27017:27017 mongo
 npm run start
 ```
 **Result:** Server running successfully at `http://localhost:8000`
+
+---
+
+### Step 20: Install Email Packages
+**Command:**
+```powershell
+npm i mailgen nodemailer
+```
+**Purpose:** Installed email-related packages:
+- **nodemailer**: Library for sending emails from Node.js
+- **mailgen**: Generate beautiful HTML emails with pre-built templates
+
+**Use Case:** nodemailer bhejne ke liye (sending emails), mailgen craft krne ke liye (creating styled email templates)
