@@ -4,15 +4,19 @@ import { validateProjectPermission } from "../middlewares/AUTH.MIDDLEWARE.JS";
 const router = Router();
 
 
-router.route("/:projectId")
+router.route("/:projectId/n/:noteId")
     .get(
         validateProjectPermission([UserRolesEnum.ADMIN, UserRolesEnum.MEMBER, UserRolesEnum.VIEWER]), // Middleware to validate permissions
         getNotes)
     .post(
         validateProjectPermission([UserRolesEnum.ADMIN, UserRolesEnum.MEMBER]), // Middleware to validate permissions
         createNote)
-    .put(updateNote)
-    .delete(deleteNote);
+    .put(
+        validateProjectPermission([UserRolesEnum.ADMIN, UserRolesEnum.MEMBER]), // Middleware to validate permissions
+        updateNote)
+    .delete(
+        validateProjectPermission([UserRolesEnum.ADMIN, UserRolesEnum.MEMBER]), // Middleware to validate permissions
+        deleteNote);
 
 
 export default router;
