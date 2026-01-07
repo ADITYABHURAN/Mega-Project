@@ -70,7 +70,40 @@ const createNote = async (req, res) => {
     });
 };
 
-const updateNote = async (req, res) => { };
+const updateNote = async (req, res) => { 
+    // update an existing note
+    const { noteId } = req.params;
+    const { title, content } = req.body;
 
-const deleteNote = async (req, res) => { };
+    const note = await Note.findByIdAndUpdate(
+        noteId,
+        { title, content },
+        { new: true }
+    );
+
+    res.status(200).json({
+        success: true,
+        data: note
+    });
+};
+
+const deleteNote = async (req, res) => {
+    // delete a note
+    const { noteId } = req.params;
+
+    await Note.findByIdAndDelete(noteId);
+
+    res.status(200).json({
+        success: true,
+        message: "Note deleted successfully"
+    });
+};
+
+export {
+    getNotes,
+    getNoteById,
+    createNote,
+    updateNote,
+    deleteNote
+ };
 
